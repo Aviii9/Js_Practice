@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Distance Converter</title>
+</head>
+<body>
+    <h1>Meters to Kilometers Converter</h1>
+    
+    <label for="metersInput">Enter distance in meters:</label>
+    <input type="text" id="metersInput" placeholder="Enter meters" oninput="convertDistance()" />
+
+    <br />
+
+    <label for="kilometersOutput">Result in kilometers:</label>
+    <input type="text" id="kilometersOutput" readonly />
+
+    <script>
+        function convertDistance() {
+            var meters = parseFloat(document.getElementById("metersInput").value);
+
+            if (!isNaN(meters)) {
+                var kilometers = meters / 1000;
+                document.getElementById("kilometersOutput").value = kilometers;
+            } else {
+                document.getElementById("kilometersOutput").value = "";
+            }
+        }
+    </script>
+</body>
+</html>
