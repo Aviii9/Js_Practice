@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Number Finder</title>
+</head>
+<body>
+    <h1>Reverse Number Finder</h1>
+    
+    <label for="numberInput">Enter a number:</label>
+    <input type="text" id="numberInput" placeholder="Enter a number" />
+
+    <br />
+
+    <button onclick="findReverse()">Find Reverse</button>
+
+    <br />
+
+    <label for="reverseOutput">Reverse number:</label>
+    <input type="text" id="reverseOutput" readonly />
+
+    <script>
+        function findReverse() {
+            var number = document.getElementById("numberInput").value;
+            var reverseOutput = document.getElementById("reverseOutput");
+
+            if (number !== "") {
+                var reversedNumber = number.split("").reverse().join("");
+                reverseOutput.value = reversedNumber;
+            } else {
+                reverseOutput.value = "Please enter a number.";
+            }
+        }
+    </script>
+</body>
+</html>
