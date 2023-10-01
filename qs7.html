@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patterns</title>
+</head>
+<body>
+    <h3>[a]</h3>
+    <pre id="patternA"></pre>
+    
+    <h3>[b]</h3>
+    <pre id="patternB"></pre>
+
+    <script>
+        // Pattern A
+        var patternA = '';
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= i; j++) {
+                patternA += '*';
+            }
+            patternA += '\n';
+        }
+        document.getElementById('patternA').textContent = patternA;
+
+        // Pattern B
+        var patternB = '';
+        for (var i = 5; i >= 1; i--) {
+            for (var j = 5; j > i; j--) {
+                patternB += ' ';
+            }
+            for (var k = 1; k <= i; k++) {
+                patternB += '*';
+            }
+            patternB += '\n';
+        }
+        document.getElementById('patternB').textContent = patternB;
+    </script>
+</body>
+</html>

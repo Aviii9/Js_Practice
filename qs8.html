@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get and Set Content</title>
+</head>
+<body>
+    <div id="myDiv">
+        This is some initial content.
+    </div>
+
+    <input type="text" id="newContentInput" placeholder="Enter new content">
+    <button onclick="getContent()">Get Content</button>
+    <button onclick="setContent()">Set Content</button>
+
+    <script>
+        function getContent() {
+            // Get the content of the div with id "myDiv"
+            var content = document.getElementById("myDiv").innerHTML;
+            alert("The content of the div is: " + content);
+        }
+
+        function setContent() {
+            // Get the new content from the input field
+            var newContent = document.getElementById("newContentInput").value;
+            
+            // Set the new content for the div with id "myDiv"
+            document.getElementById("myDiv").innerHTML = newContent;
+        }
+    </script>
+</body>
+</html>
