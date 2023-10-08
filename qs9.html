@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Div and Print Page</title>
+</head>
+<body>
+    <a href="#" onclick="hideDiv()">Hide Div</a>
+    <a href="#" onclick="showDiv()">Show Div</a>
+    <button onclick="printPage()">Print Page</button>
+
+    <div id="myDiv">
+        Hello.
+        This is the hidden div
+    </div>
+
+    <script>
+        function hideDiv() {
+            var div = document.getElementById("myDiv");
+            div.style.display = "none";
+        }
+
+        function showDiv() {
+            var div = document.getElementById("myDiv");
+            div.style.display = "block";
+        }
+
+        function printPage() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
