@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Mobile Number Validation</title>
+</head>
+<body>
+    <label for="mobileNumber">Enter Indian Mobile Number:</label>
+    <input type="text" id="mobileNumber" onkeyup="validateMobileNumber(this.value)">
+    <p id="validationMessage"></p>
+
+    <script>
+        function validateMobileNumber(number) {
+            const mobilePattern = /^[789]\d{9}$/; // Indian mobile number pattern (starts with 7, 8, or 9 and has exactly 10 digits)
+
+            const validationMessage = document.getElementById("validationMessage");
+
+            if (mobilePattern.test(number)) {
+                validationMessage.textContent = "Valid Indian Mobile Number!";
+                validationMessage.style.color = "green";
+            } else {
+                validationMessage.textContent = "Invalid Indian Mobile Number! Please start with 7, 8, or 9 and have exactly 10 digits.";
+                validationMessage.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
