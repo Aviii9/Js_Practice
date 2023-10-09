@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Maximum Number</title>
+</head>
+<body>
+    <label for="numbersInput">Enter 10 numbers separated by commas:</label>
+    <input type="text" id="numbersInput">
+    <button onclick="findMax()">Find Maximum</button>
+
+    <script>
+        function findMax() {
+            var numbersInput = document.getElementById("numbersInput").value;
+            var numbersArray = numbersInput.split(",").map(function(item) {
+                return parseInt(item);
+            });
+
+            if (numbersArray.length !== 10 || numbersArray.some(isNaN)) {
+                alert("Please enter exactly 10 valid numbers separated by commas.");
+                return;
+            }
+
+            var maxNumber = Math.max(...numbersArray);
+            alert("The maximum number is: " + maxNumber);
+        }
+    </script>
+</body>
+</html>
